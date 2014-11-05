@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="store">
+	<head>
+		<title>Angular.JS tutorial</title>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/gemstore.css" />
+	</head>
+	<h2 id="title">Flatlander Crafted Gems</h2>
+	<h4 id="subtitle">- an Angular store -</h4>
+	<body data-ng-controller="StoreController as store">
+		<ul class="list-group">
+			<li class="list-group-item" data-ng-repeat="product in store.products" data-ng-hide="product.soldOut">
+				<!--<h3 data-ng-include="'product-title.html'">-->
+				<h3>
+				<product-title></product-title>
+				</h3>
+				<product-panels data-ng-controller="PanelController as panel">-->
+				</product-panels>
+			</li>
+		</ul>
+		<script type="text/javascript" src="js/angular.min.js"></script>
+		<script type="text/javascript" src="js/app.js"></script>
+		<script type="text/javascript" src="js/products.js"></script>
+	</body>
+</html>
